@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Tlotliso Ledwaba</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body class="contact-page">
+  <a href="index.html" class="logo">segVd</a>
+
+
+
+    <header>
+        <a href="index.html" class="logo">segVd</a>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="hackathons.html">Hackathons</a></li>
+               <!-- <li><a href="#blog">Blog</a></li> -->
+                <li><a href="#contact" class="active">Contact</a></li>
+            </ul>
+
+            <ul class="socials">
+                <li><a href="https://github.com/segVd" target="_blank" rel="noopener"><img src="assets/icons/github.svg" alt="GitHub"></a></li>
+                <li><a href="https://discord.com/users/rndm_geek" target="_blank" rel="noopener"><img src="assets/icons/discord.svg" alt="Discord"></a></li>
+                <li><a href="https://medium.com/@segVd" target="_blank" rel="noopener"><img src="assets/icons/medium.svg" alt="Medium"></a></li>
+                <li><a href="https://www.linkedin.com/in/tlotliso-ledwaba-3201ab309/" target="_blank" rel="noopener"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+
+  <main class="hero">
+    <div class="hero-title">
+        <div class="title-row">
+          <span class="bar"></span>
+          <span>Let's connect</span>
+        </div>
+        <h1>"Contact Me!"</h1>
+        <div class="title-row">
+          <span>Reach Out</span>
+          <span class="bar"></span>
+        </div>
+      </div>
+
+
+    <form class="contact-form" action="https://formspree.io/f/mnpdbjaa" method="POST">
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <label for="subject">Subject :</label>
+      <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
+
+      <label for="message">Content :</label>
+      <textarea id="message" name="message" rows="6" placeholder="Write your message here" required></textarea>
+
+      <div class="form-actions">
+        <div class="g-recaptcha" data-sitekey="6LfWLisuAAAAAPPnFXVapM15sA5iRXFJJT1fQ7Qx" data-theme="dark"></div>
+        <button type="submit">Submit</button>
+        <p class="form-status"></p>
+      </div>
+    </form>
+  </main>
+
+
+
+
+    <div class="pets">
+        <span class="pet">👾</span>
+        <span class="pet">🐈‍⬛</span>
+        <span class="pet">🐙</span>
+    </div>
+
+    <div class="banner">
+      <div class="ticker-track">
+          <div class="ticker-group">
+          <span>CYBERSECURITY</span>
+          <span>PENETRATION TESTING</span>
+          <span>CTF</span>
+          <span>WEB APP SECURITY</span>
+          <span>WRITEUPS</span>
+          </div>
+          <div class="ticker-group" aria-hidden="true">
+          <span>CYBERSECURITY</span>
+          <span>PENETRATION TESTING</span>
+          <span>CTF</span>
+          <span>WEB APP SECURITY</span>
+          <span>WRITEUPS</span>
+          </div>
+      </div>
+    </div>
+
+
+
+</body>
+
+
+  <script src="contact.js"></script>
+
+</html>

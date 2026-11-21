@@ -110,30 +110,19 @@
 .hero-title {
   width: max-content;
   max-width: 100%;
+  margin: 0 auto;
 }
 
 .title-row,
 .hero h1,
-.hero h2 {
+.hero h2,
+.page h1,
+.page h2 {
   font-family: "Bebas Neue", sans-serif;
 }
 
-.title-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--cyan);
-  font-size: 1.1rem;
-  text-transform: uppercase;
-}
-
-.bar {
-  flex: 1;
-  height: 12px;
-  border: 2px solid var(--cyan);
-}
-
-.hero h1 {
+.hero h1,
+.page h1 {
   color: transparent;
   -webkit-text-stroke: 2px var(--mint);
   font-size: 5rem;
@@ -143,14 +132,15 @@
   margin: 4px 0;
 }
 
-.hero h2 {
+.hero h2,
+.page h2 {
   margin-top: 60px;
   color: transparent;
   -webkit-text-stroke: 1.5px var(--cyan);
-  font-size: 3rem;
+  font-size: 2rem;
   text-transform: uppercase;
+  text-align: center;
 }
-
 .hero-box {
   position: relative;
   margin-top: auto;
@@ -181,6 +171,21 @@
   right: -12px;
   border-bottom: 2px solid var(--cyan);
   border-right: 2px solid var(--cyan);
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--cyan);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.bar {
+  flex: 1;
+  height: 12px;
+  border: 2px solid var(--cyan);
 }
 
 
@@ -480,6 +485,104 @@
 
 
 
+
+
+/* ================================================================================================================================*/
+
+
+
+/* contact page */
+
+.contact-page {
+  background:
+    linear-gradient(rgba(0, 11, 19, 0.85)) fixed,
+    url("assets/background/blue.jpg") center / cover no-repeat fixed;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 24px 16px;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 60px;
+}
+
+.contact-form label {
+  padding-top: 10px;
+  color: var(--cyan);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.4rem;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.contact-form input,
+.contact-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 14px;
+  color: var(--cyan);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--blue);
+  resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--blue);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--mint);
+}
+
+.form-actions {
+  grid-column: -2 / -1;
+}
+
+.form-actions .g-recaptcha {
+  margin-bottom: 24px;
+    display: flex;
+  justify-content: center;
+}
+
+.contact-form button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  color: var(--navy);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--mint);
+  border: 1px solid var(--mint);
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  color: var(--mint);
+  background: transparent;
+}
+
+.form-status {
+  margin: 16px 0 0;
+  color: var(--mint);
+}
+
+
+
+
+
+
+
+
 /* ================================================================================================================================*/
 
 
@@ -599,18 +702,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* ================================================================================================================================*/
-
 
 
 
@@ -670,11 +762,12 @@
   }
 
   .hero h1,
-  .hack-header h2 {
+  .page h1 {
     font-size: 3rem;
   }
 
-  .hero h2 {
+  .hero h2,
+  .page h2 {
     margin-top: 32px;
     font-size: 1.4rem;
   }
@@ -693,13 +786,8 @@
     padding: 16px 12px;
   }
 
-  /* the 80px inline margin on .hack-header already clears the header */
   .page {
-    padding: 10px 20px 110px;
-  }
-
-  .hack-subhead {
-    font-size: 1.2rem;
+    padding: 90px 20px 110px;
   }
 
   .hack-blog {
@@ -720,3 +808,9 @@
     font-size: 1.5rem;
   }
 }
+
+.g-recaptcha,
+.form-status {
+  grid-column: 1;
+}
+
